@@ -6,7 +6,7 @@ Team project for the *Programming Fundamentals* course, MSc in Data Science, ISC
 
 ## Data
 
-[Portugal Real Estate 2024](https://www.kaggle.com/datasets/luvathoms/portugal-real-estate-2024) (Kaggle), about 120,000 property listings across Portugal, downloaded automatically with `kagglehub`. The analysis keeps only residential apartments and duplexes in the Lisbon district.
+[Portugal Real Estate 2024](https://www.kaggle.com/datasets/luvathoms/portugal-real-estate-2024) (Kaggle), 135,536 property listings across Portugal, included in `data/`. The analysis keeps only residential apartments and duplexes in the Lisbon district.
 
 ## Method
 
@@ -30,19 +30,22 @@ Number of bathrooms had the strongest correlation with price, followed by total 
 ## Repository structure
 
 ```
-lisbon_real_estate.ipynb   # data download, cleaning, model, visualisations
-report.pdf                 # full written report (Portuguese)
+lisbon_real_estate.ipynb   # data loading, cleaning, model, visualisations
+data/                      # portugal_listinigs.csv (Portugal Real Estate 2024, Kaggle)
 images/                    # figures used in this README
+report_en.pdf              # full written report (English)
+report_pt.pdf              # original report (Portuguese)
+requirements.txt           # Python dependencies
 ```
 
 ## How to run
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn kagglehub
+pip install -r requirements.txt
 jupyter notebook lisbon_real_estate.ipynb
 ```
 
-The dataset is downloaded by the first cell (a Kaggle account may be required).
+Open the notebook from the repository folder; it reads the dataset from `data/`, so no download or Kaggle account is needed.
 
 ## Tech stack
 
@@ -50,4 +53,4 @@ Python · pandas · scikit-learn · matplotlib · seaborn
 
 ## Team
 
-André Marques, Fernando Rocha and Frederico Ferreira. The full report with the team's methodology and discussion is in [`report.pdf`](report.pdf) (Portuguese).
+André Marques, Fernando Rocha and Frederico Ferreira. The full report with the team's methodology and discussion is in [`report_en.pdf`](report_en.pdf) (English) and [`report_pt.pdf`](report_pt.pdf) (original, Portuguese).
